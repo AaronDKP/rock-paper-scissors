@@ -14,9 +14,11 @@
 
 function playRound(playerSelection, computerSelection) {
     // your code here!
+
   }
 
-  let getComputerChoice = function (string){
+  
+  function getComputerChoice(){
     let randomChoice = Math.floor(Math.random() * 3);
     
     if(randomChoice === 0){
@@ -28,8 +30,22 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 
-console.log(getComputerChoice())
-   
-  const playerSelection = "rock";
-  const computerSelection = getComputerChoice();
-  console.log(playRound(playerSelection, computerSelection));
+function getPlayerSelection(){
+    let query = prompt("Rock, Paper or Scissors?");
+        if(query.toLowerCase() === 'rock'){
+            return('Rock!')
+        } else if (query.toLowerCase() === 'paper'){
+            return('Paper!')
+        } else if (query.toLowerCase() === 'scissors'){
+            return('Scissors!')
+        } else {
+            return('Please enter "Rock", "Paper" or "Scissors"')
+        }
+
+    }
+
+    console.log(getPlayerSelection())
+
+  let playerSelection = getPlayerSelection();
+  let computerSelection = getComputerChoice();
+  //console.log(playRound(playerSelection, computerSelection));
