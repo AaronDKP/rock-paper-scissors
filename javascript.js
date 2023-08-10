@@ -7,9 +7,32 @@
 //return string output of win/loss and reason of "rock beats scissors" etc
 
 
-//game loops 5 times
+//create loop that plays 5 rounds of game
+//keep track of score
 //show win/loss and final score out of 5
 
+
+
+function game(playRound){
+    let roundsPlayed = 0;
+    let score = 0;
+
+    for (roundsPlayed = 0; roundsPlayed < 5; roundsPlayed++){
+        let result = playRound();
+            console.log(result);
+        if (result.slice(0, 7) === 'You Win'){
+           score++;
+        }
+    }
+
+    console.log('Your Score: ' + score + '/5');
+
+    let winner;
+    if(score === 5){
+        console.log('You Win!')
+    } else if (roundsPlayed === 5 && score < 5){
+        console.log('You Lose!')
+    }
 
 
 function playRound(playerSelection, computerSelection) {
@@ -51,36 +74,41 @@ function playRound(playerSelection, computerSelection) {
     //output if player selection = rock
 
     if (playerSelection === 'Rock!' && computerSelection === 'Scissors!'){
-        alert('You Win!');
+        return('You Win! Rock beats Paper');
     } else if (playerSelection === 'Rock!' && computerSelection === 'Paper!'){
-        alert('You Lose!')
+        return('You Lose! Paper beats Rock')
     } else if(playerSelection === 'Rock!' && computerSelection === 'Rock!'){
-        alert("It's a Tie!")
+        return("It's a Tie!")
     }
 
     //output if player selection = paper
 
     if (playerSelection === 'Paper!' && computerSelection === 'Rock!'){
-        alert('You Win!');
+        return('You Win! Paper beats Rock');
     } else if (playerSelection === 'Paper!' && computerSelection === 'Scissors!'){
-        alert('You Lose!')
+        return('You Lose! Scissors beats Paper')
     } else if(playerSelection === 'Paper!' && computerSelection === 'Paper!'){
-        alert("It's a Tie!")
+        return("It's a Tie!")
     }
 
         
     //output if player selection = scissors
 
     if (playerSelection === 'Scissors!' && computerSelection === 'Paper!'){
-        alert('You Win!');
+        return('You Win! Scissors beats Paper');
     } else if (playerSelection === 'Scissors!' && computerSelection === 'Rock!'){
-        alert('You Lose!')
+        return('You Lose! Rock beats Scissors')
     } else if(playerSelection === 'Scissors!' && computerSelection === 'Scissors!'){
-        alert("It's a Tie!")
+        return("It's a Tie!")
     }
-
-
 
 }
 
- console.log(playRound());
+}
+
+
+
+
+console.log(game())
+
+ //console.log(playRound());
