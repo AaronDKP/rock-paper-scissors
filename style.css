@@ -1,0 +1,145 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Courier New', monospace;
+}
+
+#gameContainer {
+    min-height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F0E5;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #EADBC8;
+    margin: 0;
+    height: 100px;
+}
+
+#welcomeScreen {
+    display: flex;
+    margin: auto 0;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+#welcomeImgs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
+.welcomeButton {
+    display: flex;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+.welcomeRock, .welcomePaper, .welcomeScissors {
+    width: 20%;
+}
+
+img.logo {
+    margin-top: 10px;
+    height: 110px;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #EADBC8;
+    width: 100%;
+    height: 100px;
+}
+
+#result {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+}
+
+#roundResult {
+    text-align: center;
+    width: 100%;
+}
+
+#retryButton {
+    display: none;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+#hands {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
+
+.playerImg, .computerImg {
+    width: 300px;
+}
+
+.computerImg {
+    transform: rotateY(180deg);
+}
+
+#scores {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20%;
+    width: 100%;
+    margin-bottom: -100px;
+    margin-top: -100px;
+    font-family: 'Courier New', monospace;
+    font-size: 100px;
+}
+
+#buttonContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.button {
+    display: flex;
+    margin: 10px 40px;
+    padding: 10px 20px;
+    background: none;
+    border: none;
+    font-family: 'Courier New', monospace;
+    font-size: 40px;
+    font-weight: 800;
+}
+
+
+.button:hover, .welcomeButton:hover, #retryButton:hover {
+    color: #DAC0A3;
+    transition: 0.2s;
+}
+
+.button:active, .welcomeButton:active, #retryButton:active {
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+} 
